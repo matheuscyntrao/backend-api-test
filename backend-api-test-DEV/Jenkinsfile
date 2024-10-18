@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+     parameters {
+        choice(choices: ['cliente-varejo-service','mostruario-service', 'filial-service','filial-virtual-service', 'convenio-service', 'pedido-service','shopping-cart-service', 'cliente-service', 'item-service','cupom2.0','plataforma','omnialo-backend', 'shipping-service','pbm-gateway-service','puc-service', 'payment-gateway-service' ,'regressao'], description: 'Qual grupo de feature será executada?', name: 'FEATURE')
+        choice(choices: ['regressao','FB','FA', 'FE'], description: 'Cenarios das features que serão executadas ?', name: 'SCENARIO')
+    }
+    stages {
+         stage('Run tests') {
+            steps {
+                script {
+                    sh label: '', script: """
+                    ./gradlew report -Plauncher=${FEATURE} -Pambiente=${env.GIT_BRANCH} -Ptag="ambiente:${env.GIT_BRANCH};${SCENARIO}" -Plocal=false  test -Dcucumber.filter.tags="not @DEV and @${FEATURE} and @${SCENARIO}" clean test
+                  """
+                }
+            }
+        }
+
+    }
+}

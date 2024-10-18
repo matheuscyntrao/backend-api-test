@@ -1,0 +1,94 @@
+package model.domino.filial.response;
+
+import lombok.Data;
+
+import javax.validation.Valid;
+import java.math.BigDecimal;
+
+@Data
+public class GetFilialIdResponse_v1 {
+    private Integer filial;
+    private String nomeFilial;
+    private String cnpj;
+    private String cnpjMatriz;
+    private Integer horarioAbertura;
+    private Integer horarioFechamento;
+    private String pendenciaPedido;
+    private String estoqueNegativo;
+    private String cancelamentoContinuoItem;
+    private BigDecimal taxaEntrega;
+    private Integer intervaloRotatividade;
+    private BigDecimal valorMinimo;
+    private String dataUltimaMediaVenda;
+    private String nominalParaCheques;
+    private Integer codigoReduzido;
+    private Integer codigoContabil;
+    private Integer maximoDiasCheque;
+    private BigDecimal valorMaximoChequeSemLiberador;
+    private String canhoto;
+    private Integer codigoDimed;
+    private Integer cadeiaMinimaPesquisa;
+    private String mensagemCupomFiscal;
+    private Integer codigoDistribuidorDimed;
+    private String fechamento;
+    private Integer tempoMaximoSaidaPedido;
+    private String dataUltimaAbertura;
+    private String dataUltimoFechamento;
+    private BigDecimal valorMinimoCheque;
+    private BigDecimal maximoDescontoNota;
+    private String filialBalcao;
+    private Integer seqAcertosDimed;
+    private String caminhoLocalizacaoArquivos;
+    private String dataUltimaExportacao;
+    private String dataUltimaBuscaPreco;
+    private Integer codigoDistribuidorPanvel;
+    private Integer numeroPedidos;
+    private String dataUltimaRentabilidade;
+    private String filialEpharma;
+    private String filialGoodmed;
+    private String solicitaVendedor;
+    private Double jurosMora;
+    private Double multaPorAtraso;
+    private Integer diasMulta;
+    private Integer codCondicaoPagamento;
+    private Integer codigoInstrucaoJuros;
+    private Integer codigoInstrucaoMulta;
+    private String bancoFilialParado;
+    private Integer maximoDiasDebitoPre;
+    private Integer codigoUsuarioConfRedifi;
+    private String horarioAberFeriado;
+    private String horarioFechFeriado;
+    private String horarioAberFeriadoTele;
+    private String horarioFechFeriadotele;
+    private String horarioAberFeriadoExpress;
+    private String horarioFechFeriadoExpress;
+    private String horarioAberFeriadoAmb;
+    private String horarioFechFeriadoAmb;
+    private Integer codigoUsarioVendaPrazo;
+    private String inventarioAberto;
+    private String nomeAmigavel;
+    private String retiradaTeleBalcao;
+    private Integer prazoSeparacaoTele;
+    private String captcaoReceiturario;
+    @Valid
+    private GetFilialIdResponse_v1_Endereco endereco;
+    @Valid
+    private GetFilialIdResponse_v1_Servico servico;
+    private String filialPanvelGo;
+    private String horarioAberturaClinic;
+    private String horarioFechamentoClinic;
+    private String possuiAgendamentoClinic;
+    private String telefone;
+    private String celular;
+    private String centralAloPanvel;
+    private Boolean possuiAtendimentoNoDia;
+    private Boolean conferenciaPreVendaOmni;
+    private Boolean conferenciaVendaOmni;
+    private Boolean checkoutOmni;
+    private Boolean gravaVendaNaoEfetivada;
+    private Boolean novoLoad;
+    private Boolean filialDelivery;
+    private Integer filiaisDeApoio[];
+    private Boolean filialWMS;
+    private Integer refreshNotas;
+}
